@@ -1,0 +1,472 @@
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #f4f6f8;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background: #1f2937;
+  color: white;
+  padding: 10px 20px;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.page {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.dashboard {
+  display: flex;
+  gap: 20px;
+  font-weight: bold;
+}
+
+.students-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px;
+}
+
+.card {
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.panel {
+  background: white;
+  padding: 15px;
+  border-left: 4px solid #2563eb;
+}
+
+.panel button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 8px;
+}
+
+.danger {
+  background: #dc2626;
+  color: white;
+  border: none;
+}
+
+.Placed {
+  color: green;
+  font-weight: bold;
+}
+
+.Not {
+  color: red;
+  font-weight: bold;
+}
+
+.add-btn {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.panel input,
+.panel select {
+  width: 100%;
+  margin: 4px 0;
+  padding: 6px;
+}
+
+/* =======================
+   COMPANIES SECTION
+======================= */
+
+.companies-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 15px;
+}
+
+.add-btn {
+  background: #16a34a;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.add-btn:hover {
+  background: #15803d;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.panel {
+  background: #ffffff;
+  padding: 16px;
+  border-left: 4px solid #2563eb;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+}
+
+.panel input {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.panel button {
+  width: 100%;
+  padding: 8px;
+  margin-top: 6px;
+}
+
+.danger {
+  background: #dc2626;
+  color: white;
+  border: none;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===============================
+   COMPANIES SECTION FIX
+=============================== */
+
+#companyList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+/* Company Card */
+#companyList .card {
+  background: #ffffff;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  cursor: default;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#companyList .card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+#companyList h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+#companyList p {
+  margin: 4px 0;
+  font-size: 14px;
+  color: #374151;
+}
+
+/* Add Company Form */
+.add-company {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.add-company input {
+  padding: 8px;
+  font-size: 14px;
+}
+
+.add-company button {
+  padding: 8px 14px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-company button:hover {
+  background: #1d4ed8;
+}
+
+/* =======================
+   ANALYTICS DASHBOARD
+======================= */
+
+.analytics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.stat-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 18px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card span {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.stat-card.success {
+  border-left: 6px solid #16a34a;
+}
+
+.danger-card {
+  border-left: 6px solid #dc2626;
+}
+
+/* =======================
+   MOBILE RESPONSIVE FIX
+======================= */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar ul {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding-top: 10px;
+  }
+
+  .students-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .companies-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .panel {
+    border-left: none;
+    border-top: 4px solid #2563eb;
+  }
+
+  .dashboard {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin: 20px 0;
+  }
+
+
+  .add-company {
+    flex-direction: column;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 16px;
+  }
+}
+
+#yearAnalytics .card {
+  border-left: 6px solid #2563eb;
+}
+
+/* =========================
+   STUDENT PROFILE SCROLL FIX
+========================= */
+
+.students-layout {
+  align-items: flex-start;
+}
+
+/* Right-side profile panel */
+#panel {
+  position: sticky;
+  top: 80px;
+  /* height of navbar */
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+@media (max-width: 768px) {
+  .students-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #panel {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+/* =========================
+   COLLEGE PROFILE SCROLL FIX
+========================= */
+
+#collegePanel {
+  position: sticky;
+  top: 80px;
+  /* navbar height */
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+
+@media (max-width: 768px) {
+  .students-layout {
+    grid-template-columns: 1fr;
+  }
+
+  #panel,
+  #collegePanel {
+    position: relative;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+/* =========================
+   STICKY PROFILE PANELS (DESKTOP)
+========================= */
+
+.students-layout {
+  align-items: flex-start;
+}
+
+/* Student profile */
+#panel,
+#collegePanel {
+  position: sticky;
+  top: 80px;
+  /* navbar height */
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+
+/* =========================
+   MOBILE OVERRIDE (≤ 768px)
+========================= */
+
+@media (max-width: 768px) {
+
+  .students-layout,
+  .companies-layout {
+    grid-template-columns: 1fr;
+  }
+
+  /* Disable sticky panels */
+  #panel,
+  #collegePanel {
+    position: static;
+    height: auto;
+    max-height: none;
+    overflow: visible;
+    margin-top: 20px;
+  }
+
+  .dashboard {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .add-company {
+    flex-direction: column;
+  }
+}
+
+/* =========================================
+   SAFE SCROLL FIX (STUDENTS + COLLEGES)
+   Does NOT affect existing layout
+========================================= */
+
+/* Ensure grid items align properly */
+.students-layout {
+  align-items: flex-start;
+}
+
+/* STUDENT PROFILE PANEL SCROLL */
+#panel {
+  position: sticky;
+  top: 90px;
+  /* navbar height */
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+}
+
+/* COLLEGE PROFILE PANEL SCROLL */
+#collegePanel {
+  position: sticky;
+  top: 90px;
+  /* navbar height */
+  max-height: calc(100vh - 110px);
+  overflow-y: auto;
+}
+
+/* Smooth scrolling */
+#panel,
+#collegePanel {
+  scrollbar-width: thin;
+}
+
+/* =========================
+   MOBILE SAFE BEHAVIOR
+========================= */
+@media (max-width: 768px) {
+
+  /* Stack layout already exists – keep it */
+  #panel,
+  #collegePanel {
+    position: relative;
+    max-height: none;
+    overflow: visible;
+  }
+}
